@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MovieCard from "./Moviecard";
-import chevron from "../Assets/Chevron right.png";
+import chevron from "../../Assets/Chevron right.png";
 
 function Movie() {
   const [topRatedMovies, setTopRatedMovies] = useState([]);

@@ -1,8 +1,9 @@
 import React from 'react';
-import facebook from '../Assets/fa-brands_facebook-square.png';
-import insta from '../Assets/fa-brands_instagram.png';
-import youtube from '../Assets/fa-brands_youtube.png';
-import twitter from '../Assets/fa-brands_twitter.png';
+
+import facebook from '../../Assets/fa-brands_facebook-square.png';
+import insta from '../../Assets/fa-brands_instagram.png';
+import youtube from '../../Assets/fa-brands_youtube.png';
+import twitter from '../../Assets/fa-brands_twitter.png';
 import { Link } from 'react-router-dom';
 
 function Footer() {
