@@ -22,7 +22,7 @@ function Movie() {
 
   return (
     <div className="Movie container py-5 mx-auto">
-      <div className="flex justify-between py-10">
+      <div className="flex justify-between container mx-auto py-10">
         <h1 className="font-bold text-2xl tracking-wide ">Featured Movie</h1>
         <div className="flex items-center">
           <p className="text-red-700 px-2 cursor-pointer font-medium">
@@ -31,7 +31,7 @@ function Movie() {
           <img src={chevron} alt="chevron-right" className="h-4 w-4" />
         </div>
       </div>
-      <div className="movie-list grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-12">
+      <div className="movie-list grid  lg:grid-cols-4 md:grid-cols-2 grid-cols-1  gap-12">
         {topRatedMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
