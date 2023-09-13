@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import a from '../Assets/Menu.png';
 import a3 from '../Assets/tv.png';
 import { NavLink } from 'react-router-dom';
+import MovieCard from './Home/Moviecard';
 
 function Nav() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ function Nav() {
   const [currentPage, setCurrentPage] = useState(1);
   const [error, setError] = useState(null); 
   const [searched, setSearched] = useState(false);
-  const resultsPerPage = 8;
+  const resultsPerPage = 4;
 
   const handleSearchQueryChange = (e) => {
     setSearchQuery(e.target.value);
@@ -167,20 +168,7 @@ function Nav() {
                   </div>
                   <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 mt-4">
                     {currentResults.map((movie) => (
-                      <div key={movie.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
-                        
-                        <img
-                          src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                          alt={movie.title}
-                          className="h-24 w-full object-cover"
-                        />
-                        <div className="p-4">
-                          <h2 className="text-2xl font-semibold">{movie.title}</h2>
-                          <p className="text-gray-500">
-                            Release Date: {movie.release_date}
-                          </p>
-                        </div>
-                      </div>
+                        <MovieCard key={movie.id} movie={movie} />
                     ))}
                   </div>
                 </>
@@ -279,19 +267,7 @@ function Nav() {
         <div className="text-center mt-4 text-red-500 text-3xl font-bold">No results found</div>
       ) : (
         searchResults.map((movie) => (
-          <div key={movie.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              alt={movie.title}
-              className="h-24 w-full object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-2xl font-semibold">{movie.title}</h2>
-              <p className="text-gray-500">
-                Release Date: {movie.release_date}
-              </p>
-            </div>
-          </div>
+          <MovieCard key={movie.id} movie={movie} />
         ))
       )}
     </div>
