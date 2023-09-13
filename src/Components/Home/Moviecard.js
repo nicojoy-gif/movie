@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import fav from '../../Assets/Favorite.png'
 const MovieCard = ({ movie }) => {
   console.log(movie.id);
   return (
@@ -8,12 +8,18 @@ const MovieCard = ({ movie }) => {
       className="movie-card bg-white  rounded-lg shadow-lg overflow-hidden"
     >
       <Link to={`/movie/${movie.id}`} className="btn-details">
+       <div className="relative">
         <img
           src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
           alt={movie.title}
           data-testid="movie-poster"
-          className="movie-poster w-full h-64"
+          className="movie-poster relative w-full h-64"
         />
+         <div className="absolute top-3 right-3">
+          <img src={fav} alt="favorite" />
+        </div>
+        </div>
+       
         <div className="movie-details p-4">
           <h2
             data-testid="movie-title"

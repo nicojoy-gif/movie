@@ -54,26 +54,26 @@ const MovieInfo = () => {
                 <li className="hover:bg-red-100 px-7 relative hover:border-r-4 cursor-pointer border-red-400 w-full py-5">
                   <Link to="/">
                     <div className="flex items-center content-center">
-                      <img src={a} className="h-6 w-6 mx-5" />
+                      <img src={a} className="h-6 w-6 mx-5" alt="home-logo" />
                       <p className="text-gray-500 font-bold">Home</p>
                     </div>
                   </Link>
                 </li>
                 <li className="hover:bg-red-100 px-7 hover:border-r-4 border-red-400 cursor-pointer w-full py-5">
                   <div className="flex items-center content-center">
-                    <img src={a1} className="h-6 w-6 mx-5" />
+                    <img src={a1} className="h-6 w-6 mx-5" alt="movie-logo" />
                     <p className="text-gray-500 font-bold">Movies</p>
                   </div>
                 </li>
                 <li className="hover:bg-red-100 px-7 hover:border-r-4 cursor-pointer border-red-400 w-full py-5">
                   <div className="flex items-center content-center">
-                    <img src={a2} className="h-6 w-6 mx-5" />
+                    <img src={a2} className="h-6 w-6 mx-5" alt="series-logo"/>
                     <p className="text-gray-500 font-bold">TV Series</p>
                   </div>
                 </li>
                 <li className="hover:bg-red-100 px-7 hover:border-r-4 cursor-pointer border-red-400 w-full py-5">
                   <div className="flex items-center content-center">
-                    <img src={a4} className="h-6 w-6 mx-5" />
+                    <img src={a4} className="h-6 w-6 mx-5" alt="calendar logo" />
                     <p className="text-gray-500 hover:text-red font-bold">
                       Upcoming
                     </p>

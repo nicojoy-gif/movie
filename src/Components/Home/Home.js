@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "../Nav";
-import { NavLink } from "react-router-dom";
 import a from "../../Assets/Poster.png";
 import a1 from "../../Assets/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png";
 import a2 from "../../Assets/PngItem_1381056 1.png";
