@@ -190,7 +190,7 @@ const MovieInfo = () => {
                     </p>
                   </div>
                   <div>
-                    <img src={c3} alt="rated movie" className="w-5/6"/>
+                    <img src={c3} alt="rated movie" className="lg:w-5/6 w-full my-2"/>
                   </div>
                 </div>
                 <div className="lg:w-2/6 w-full">
