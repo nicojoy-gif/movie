@@ -10,6 +10,8 @@ import b1 from "../../Assets/Plays.png";
 import c from "../../Assets/Star.png";
 import c1 from "../../Assets/Group 50.png";
 import c2 from "../../Assets/Group 52.png";
+import c3 from '../../Assets/Group 522.png'
+import c4 from '../../Assets/Group 51.png'
 const MovieInfo = () => {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
@@ -167,7 +169,7 @@ const MovieInfo = () => {
 
               <div className="flex flex-col  lg:flex-row my-2">
                 <div className="lg:w-4/6 w-full text-gray-800 text-lg font-medium  text-start">
-                  <p className="py-2" data-testid="movie-overview">
+                  <p className="py-2 w-5/6" data-testid="movie-overview">
                     {movieDetails.overview}
                   </p>
                   <div className="py-2">
@@ -187,16 +189,19 @@ const MovieInfo = () => {
                       </span>
                     </p>
                   </div>
+                  <div>
+                    <img src={c3} alt="rated movie" className="w-5/6"/>
+                  </div>
                 </div>
                 <div className="lg:w-2/6 w-full">
                   <div className="mb-2">
                     <img src={c1} alt="see showtimes" className="h-12 w-full" />
                   </div>
                   <div className="mb-2">
-                    <img src={c1} alt="Watch more" className="h-12 w-full" />
+                    <img src={c4} alt="Watch more" className="h-12 w-full" />
                   </div>
                   <div className="mb-2">
-                    <img src={c2} alt="best movies" className="w-full h-40" />
+                    <img src={c2} alt="best movies" className="w-full h-48" />
                   </div>
                 </div>
               </div>
