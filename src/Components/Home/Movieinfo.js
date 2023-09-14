@@ -43,7 +43,7 @@ const MovieInfo = () => {
   return (
     <div className=" ">
       <section className="flex flex-col lg:flex-row">
-        <div className="lg:w-1/6 w-full border rounded-r-3xl  border-gray-400 flex flex-col ">
+        <div className="lg:w-1/6 lg:order-1 order-2 w-full border rounded-r-3xl  border-gray-400 flex flex-col ">
           <div className="mt-5">
             <div className="flex space-x-4  content-center justify-center items-center">
               <img src={a3} alt="logo" className="h-10 w-10" />
@@ -67,13 +67,17 @@ const MovieInfo = () => {
                 </li>
                 <li className="hover:bg-red-100 px-7 hover:border-r-4 cursor-pointer border-red-400 w-full py-5">
                   <div className="flex items-center content-center">
-                    <img src={a2} className="h-6 w-6 mx-5" alt="series-logo"/>
+                    <img src={a2} className="h-6 w-6 mx-5" alt="series-logo" />
                     <p className="text-gray-500 font-bold">TV Series</p>
                   </div>
                 </li>
                 <li className="hover:bg-red-100 px-7 hover:border-r-4 cursor-pointer border-red-400 w-full py-5">
                   <div className="flex items-center content-center">
-                    <img src={a4} className="h-6 w-6 mx-5" alt="calendar logo" />
+                    <img
+                      src={a4}
+                      className="h-6 w-6 mx-5"
+                      alt="calendar logo"
+                    />
                     <p className="text-gray-500 hover:text-red font-bold">
                       Upcoming
                     </p>
@@ -105,7 +109,7 @@ const MovieInfo = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-5/6 w-full">
+        <div className="lg:w-5/6 lg:order-2 order-1 w-full">
           <div className="flex flex-col m-5">
             <div className="h-1/3 w-full relative">
               <img
@@ -125,7 +129,7 @@ const MovieInfo = () => {
 
             <div className="h-1/2 my-4">
               <div className="flex flex-col lg:flex-row lg:justify-between">
-                <div className="flex">
+                <div className="lg:flex block">
                   <h2
                     data-testid="movie-title"
                     className="text-gray-500 font-medium"
@@ -140,14 +144,14 @@ const MovieInfo = () => {
                       {movieDetails.runtime}mins
                     </span>
                   </h2>
-
-                  <button className="rounded-full bg-red-50 text-red-400 font-medium mx-2 px-3 border border-gray-300">
-                    Action
-                  </button>
-
-                  <button className="rounded-full bg-red-50 text-red-400 font-medium mx-2 px-3 border border-gray-300">
-                    Drama
-                  </button>
+                  {movieDetails.genres.map((genre) => (
+                    <button
+                      key={genre.id}
+                      className="rounded-full bg-red-50 text-red-400 font-medium mx-2 px-3 border border-gray-300"
+                    >
+                      {genre.name}
+                    </button>
+                  ))}
                 </div>
                 <div className="flex">
                   <img src={c} alt="favorite" />
